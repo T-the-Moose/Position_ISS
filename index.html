@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Position de l'ISS</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="konami.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!--  Konami Code -->
+<script>
+    function Prompt() {
+        let res = prompt("Combien de temps met l'ISS à faire le tour de la terre ?");
+            if (res === "90 minutes" || res === "90minutes") {
+                alert("Pas mal !");
+            } else {
+                prompt("Combien de temps met l'ISS à le tour de la terre");
+            }
+
+        let res2 = prompt ("A quelle altitude l'ISS se déplace t-il ?")
+            if (res2 === "370 kilomètres" || res2 === "370km" || res2 === "370 km") {
+                alert("Pas mal du tout ! Aller, une dernière");
+            } else {
+                prompt("A quelle altitude l'ISS se déplace t-il ?");
+            }
+
+        let res3 = prompt("Quel est la vitesse moyenne de l'ISS ?");
+            if (res3 === "28 000km/h" || res3 === "28000km/h") {
+                alert ("Ton CDI pour la NASA vient d'être envoyé par recommandé à ton domicile ! GG !");
+            } else {
+                prompt("Quel est la vitesse moyenne de l'ISS");
+            }
+        }
+        function ConfirmMessage() {
+            if (confirm("Voulez-vous changer la couleur de fond de page ?")) {
+                // Clic sur OK
+                document.body.style.backgroundColor="#00048B";
+            }
+        }
+        var easter_egg = new Konami(function() {
+        Prompt();
+        ConfirmMessage();
+    });
+
+</script>
+
+    <h1 id="titre">Position de l'ISS</h1>
+    <div id="positionISS"></div>
+    <div id="map"></div>
+    <canvas class="particules"></canvas>
+
+</body>
+</html>

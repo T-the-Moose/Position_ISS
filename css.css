@@ -1,0 +1,43 @@
+/*body {*/
+/*    background-image: url(/img/Space.jpg);*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+body {
+    background-color : black;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
+    z-index: 1;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.particules {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#map {
+    height: 50em;
+    margin: 2em 15em 0em 15em;
+    background-color: #fff;
+    box-shadow: 1px 1px 40px 20px white;
+    border-radius: 50px;
+    z-index: 1;
+}
